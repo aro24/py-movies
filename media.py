@@ -1,0 +1,41 @@
+class Media:
+  def __init__(self, title):
+    self.title = title
+  
+  def slug(self):
+    slugged = self.title
+    #!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+    slugged = slugged.replace('!', '')
+    slugged = slugged.replace('"', '')
+    slugged = slugged.replace('#', '')
+    slugged = slugged.replace('$', '')
+    slugged = slugged.replace('%', '')
+    slugged = slugged.replace('&', '')
+    slugged = slugged.replace('\'', '')
+    slugged = slugged.replace('(', '')
+    slugged = slugged.replace(')', '')
+    slugged = slugged.replace('*', '')
+    slugged = slugged.replace('+', '')
+    slugged = slugged.replace(',', '')
+    slugged = slugged.replace('-', '')
+    slugged = slugged.replace('.', '')
+    slugged = slugged.replace('/', '')
+    slugged = slugged.replace(':', '')
+    slugged = slugged.replace(';', '')
+    slugged = slugged.replace('<', '')
+    slugged = slugged.replace('=', '')
+    slugged = slugged.replace('>', '')
+    slugged = slugged.replace('?', '')
+    slugged = slugged.replace('@', '')
+    slugged = slugged.replace('[', '')
+    slugged = slugged.replace(']', '')
+    slugged = slugged.replace('\\', '')
+    slugged = slugged.replace('^', '')
+    slugged = slugged.replace('_', '')
+    slugged = slugged.replace('`', '')
+    slugged = slugged.replace('{', '')
+    slugged = slugged.replace('}', '')
+    slugged = slugged.replace('|', '')
+    slugged = slugged.replace('~', '') 
+    slugged = slugged.replace(" ", "-")
+    return slugged.lower()
